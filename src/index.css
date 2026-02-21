@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 15% 6%;
+    --foreground: 210 40% 95%;
+
+    --card: 240 12% 10%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 240 12% 10%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 175 80% 50%;
+    --primary-foreground: 240 15% 6%;
+
+    --secondary: 270 60% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 10% 14%;
+    --muted-foreground: 220 15% 55%;
+
+    --accent: 270 60% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 18%;
+    --input: 240 10% 18%;
+    --ring: 175 80% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom portfolio tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(270 60% 55% / 0.15), hsl(240 15% 6%), hsl(175 80% 50% / 0.08));
+    --gradient-primary: linear-gradient(135deg, hsl(175 80% 50%), hsl(270 60% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(240 12% 12% / 0.9), hsl(240 12% 8% / 0.7));
+    --shadow-card: 0 4px 24px -4px hsl(175 80% 50% / 0.08);
+    --shadow-card-hover: 0 8px 40px -4px hsl(175 80% 50% / 0.2);
+    --glow-primary: 0 0 20px hsl(175 80% 50% / 0.3);
+    --glow-secondary: 0 0 20px hsl(270 60% 55% / 0.3);
+
+    --sidebar-background: 240 12% 8%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 175 80% 50%;
+    --sidebar-primary-foreground: 240 15% 6%;
+    --sidebar-accent: 240 10% 14%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 240 10% 18%;
+    --sidebar-ring: 175 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-card {
+    background: var(--gradient-card);
+    backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-card);
+    border: 1px solid hsl(var(--border));
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .glass-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-3px);
+    border-color: hsl(175 80% 50% / 0.3);
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+  }
+
+  .glow-button {
+    box-shadow: var(--glow-primary);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+
+  .glow-button:hover {
+    box-shadow: 0 0 30px hsl(175 80% 50% / 0.5);
+    transform: translateY(-1px);
+  }
+
+  /* Scroll progress bar */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+    z-index: 100;
+    transition: width 0.1s linear;
+  }
+
+  /* Particle canvas */
+  .particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Timeline */
+  .timeline-line {
+    position: absolute;
+    left: 1.25rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, hsl(175 80% 50% / 0.5), hsl(270 60% 55% / 0.5));
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: hsl(var(--primary));
+    box-shadow: 0 0 12px hsl(175 80% 50% / 0.5);
+    position: relative;
+    z-index: 1;
+  }
+}
