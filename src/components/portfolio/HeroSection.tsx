@@ -9,6 +9,7 @@ const titles = [
 ];
 
 const HeroSection = () => {
+  const resumeUrl = `${import.meta.env.BASE_URL}umamaheswari_resume.pdf`;
   const [titleIndex, setTitleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
@@ -89,7 +90,7 @@ const HeroSection = () => {
             </a>
           </Button>
           <Button asChild variant="outline" size="lg" className="rounded-full border-primary/30 hover:bg-primary/10 hover:border-primary/60">
-            <a href="/umamaheswari_resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
               <FileText className="mr-2 h-4 w-4" /> View Resume
             </a>
           </Button>

@@ -64,7 +64,7 @@ const EducationSection = () => (
                   Full Stack Web Development (Certification)
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  Masai School (Online) · 2024
+                  Masai School (Online) · 2025
                 </p>
               </div>
             </div>

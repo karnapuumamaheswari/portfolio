@@ -6,15 +6,15 @@ const projects = [
   {
     title: "House Price Prediction",
     description:
-      "Built a Linear Regression model achieving 85% accuracy. Implemented complete ML pipeline including preprocessing, training, and evaluation.",
-    stack: ["Python", "Flask", "Machine Learning"],
+      "Developed a full stack web application for house price prediction with a responsive UI, Flask backend APIs, model inference pipeline, and structured data handling for user inputs and results.",
+    stack: ["HTML", "CSS", "JavaScript", "Flask", "Python", "REST API", "SQL"],
     github: "https://github.com/karnapuumamaheswari/house_price_prediction",
   },
   {
     title: "Sign Language Translation System",
     description:
-      "Developed a machine learning-based system to translate hand gestures into readable text using dataset preprocessing and model training.",
-    stack: ["Python", "ML", "Computer Vision"],
+      "Built a web-based system that captures gesture inputs, processes them through a trained model, and displays translated output through an integrated frontend and backend workflow.",
+    stack: ["HTML", "CSS", "JavaScript", "Flask", "Python", "Computer Vision", "OpenCV"],
     github: "https://github.com/karnapuumamaheswari/SignLanguage_TL",
   },
 ];

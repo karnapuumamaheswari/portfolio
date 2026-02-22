@@ -53,7 +53,7 @@ const SkillsSection = () => (
         viewport={{ once: true }}
         className="font-display text-3xl sm:text-4xl font-bold mb-10 text-center"
       >
-        Full Stack <span className="gradient-text">Skills</span>
+        <span className="gradient-text">Skills</span>
       </motion.h2>
 
       <motion.div

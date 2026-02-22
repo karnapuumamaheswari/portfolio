@@ -6,6 +6,7 @@ import { useState, type FormEvent } from "react";
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const contactEmail = "karnapuumamaheswari022005@gmail.com";
+  const resumeUrl = `${import.meta.env.BASE_URL}umamaheswari_resume.pdf`;
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -100,7 +101,7 @@ const ContactSection = () => {
               </a>
             </Button>
             <Button asChild size="lg" className="rounded-full bg-primary text-primary-foreground glow-button">
-              <a href="/umamaheswari_resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                 <FileText className="mr-2 h-4 w-4" /> View Resume
               </a>
             </Button>
