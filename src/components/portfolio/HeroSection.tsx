@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { ArrowDown, FolderOpen, Download } from "lucide-react";
+import { ArrowDown, FolderOpen, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
 const titles = [
   "Full Stack Web Developer",
-  "AI/ML Enthusiast",
+  "Frontend & Backend Builder",
 ];
 
 const HeroSection = () => {
@@ -73,7 +73,7 @@ const HeroSection = () => {
             </p>
           </div>
           <p className="text-muted-foreground max-w-xl mx-auto mb-8 leading-relaxed">
-            I am a passionate AI & ML student who enjoys building machine learning projects and solving coding problems. I aim to become a skilled ML engineer and contribute to impactful AI solutions.
+            I build responsive, end-to-end web applications with clean UI, robust backend logic, and scalable database design. I enjoy solving real-world problems through full stack development.
           </p>
         </motion.div>
 
@@ -89,8 +89,8 @@ const HeroSection = () => {
             </a>
           </Button>
           <Button asChild variant="outline" size="lg" className="rounded-full border-primary/30 hover:bg-primary/10 hover:border-primary/60">
-            <a href="/umamaheswar_resume.pdf" download>
-              <Download className="mr-2 h-4 w-4" /> Download Resume
+            <a href="/umamaheswari_resume.pdf" target="_blank" rel="noopener noreferrer">
+              <FileText className="mr-2 h-4 w-4" /> View Resume
             </a>
           </Button>
         </motion.div>

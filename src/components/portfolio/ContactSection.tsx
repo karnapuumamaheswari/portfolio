@@ -1,10 +1,22 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Download } from "lucide-react";
+import { Github, Linkedin, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const contactEmail = "karnapuumamaheswari022005@gmail.com";
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
+    );
+
+    window.open(`mailto:${contactEmail}?subject=${subject}&body=${body}`, "_blank");
+  };
 
   return (
     <section id="contact" className="section-padding">
@@ -24,13 +36,7 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="glass-card rounded-2xl p-6 sm:p-8 mb-8 text-left">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                window.location.href = `mailto:karnapuumamaheswari022005@gmail.com?subject=Portfolio Contact from ${form.name}&body=${form.message}`;
-              }}
-              className="space-y-4"
-            >
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="text-sm font-medium text-muted-foreground mb-1 block">Name</label>
                 <input
@@ -70,10 +76,17 @@ const ContactSection = () => {
             </form>
           </div>
 
+          <p className="text-sm text-muted-foreground mb-6">
+            Email:{" "}
+            <a href={`mailto:${contactEmail}`} className="text-primary hover:underline">
+              {contactEmail}
+            </a>
+          </p>
+
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild variant="outline" size="lg" className="rounded-full border-primary/30 hover:bg-primary/10">
-              <a href="mailto:karnapuumamaheswari022005@gmail.com">
-                <Mail className="mr-2 h-4 w-4" /> Email
+              <a href={`mailto:${contactEmail}`}>
+                {contactEmail}
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full border-primary/30 hover:bg-primary/10">
@@ -87,8 +100,8 @@ const ContactSection = () => {
               </a>
             </Button>
             <Button asChild size="lg" className="rounded-full bg-primary text-primary-foreground glow-button">
-              <a href="/umamaheswar_resume.pdf" download>
-                <Download className="mr-2 h-4 w-4" /> Resume
+              <a href="/umamaheswari_resume.pdf" target="_blank" rel="noopener noreferrer">
+                <FileText className="mr-2 h-4 w-4" /> View Resume
               </a>
             </Button>
           </div>
