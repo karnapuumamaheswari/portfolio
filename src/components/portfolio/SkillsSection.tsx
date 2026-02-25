@@ -40,7 +40,7 @@ const platformLogos: PlatformLogo[] = [
   {
     name: "CodeChef",
     logo: "https://cdn.simpleicons.org/codechef",
-    url: "https://www.codechef.com/users/maheswari_2005",
+    url: "https://www.codechef.com/users/gvp23103382023",
   },
 ];
 
