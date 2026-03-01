@@ -20,13 +20,13 @@ const projects: Project[] = [
     description:
       "A full stack web application that helps users manage grocery items efficiently with a clean, responsive interface and integrated backend APIs.",
     stack: [
+      "JavaScript",
+      "HTML",
+      "CSS",
       "React",
-      "TypeScript",
-      "Node.js",
       "Express",
-      "REST API",
-      "MongoDB",
-      "Responsive UI",
+      "Node.js",
+      "Supabase",
     ],
     major: true,
     live: "https://lustrous-sunshine-686d34.netlify.app/",
