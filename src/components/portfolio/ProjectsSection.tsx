@@ -35,6 +35,23 @@ const projects: Project[] = [
     demo: "https://drive.google.com/file/d/1NxgqKLhGJh9mFSGodIOB9YRHO2N5mIb0/view?usp=sharing",
   },
   {
+    title: "Intelligent Hospital Bed Allocation and Patient Transfer System",
+    description:
+      "Built an intelligent hospital operations platform that recommends bed allocation, waiting, internal transfer, and external transfer decisions using a reinforcement learning based workflow with a professional Streamlit dashboard.",
+    stack: [
+      "Python",
+      "PyTorch",
+      "Reinforcement Learning",
+      "DQN",
+      "Streamlit",
+      "SQLite",
+      "Pandas",
+    ],
+    major: true,
+    live: "https://intelligent-bed-allocation.streamlit.app/",
+    github: "https://github.com/karnapuumamaheswari/intelligent-bed-allocation",
+  },
+  {
     title: "House Price Prediction",
     description:
       "Developed a full stack web application for house price prediction with a responsive UI, Flask backend APIs, model inference pipeline, and structured data handling for user inputs and results.",
