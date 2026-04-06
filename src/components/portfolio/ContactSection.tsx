@@ -6,7 +6,7 @@ import { useState, type FormEvent } from "react";
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const contactEmail = "karnapuumamaheswari022005@gmail.com";
-  const resumeUrl = `${import.meta.env.BASE_URL}umamaheswari_resume.pdf?v=20260301`;
+  const resumeUrl = `${import.meta.env.BASE_URL}umamaheswari_resume.pdf?v=20260406`;
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

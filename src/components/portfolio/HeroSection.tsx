@@ -9,7 +9,7 @@ const titles = [
 ];
 
 const HeroSection = () => {
-  const resumeUrl = `${import.meta.env.BASE_URL}umamaheswari_resume.pdf?v=20260301`;
+  const resumeUrl = `${import.meta.env.BASE_URL}umamaheswari_resume.pdf?v=20260406`;
   const profilePhotoUrl = `${import.meta.env.BASE_URL}profile-photo.jpg`;
   const fallbackPhotoUrl = `${import.meta.env.BASE_URL}placeholder.svg`;
   const [titleIndex, setTitleIndex] = useState(0);
