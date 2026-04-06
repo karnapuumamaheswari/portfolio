@@ -35,17 +35,16 @@ const projects: Project[] = [
     demo: "https://drive.google.com/file/d/1NxgqKLhGJh9mFSGodIOB9YRHO2N5mIb0/view?usp=sharing",
   },
   {
-    title: "Intelligent Hospital Bed Allocation and Patient Transfer System",
+    title: "Intelligent Hospital Bed Allocation",
     description:
-      "Built an intelligent hospital operations platform that recommends bed allocation, waiting, internal transfer, and external transfer decisions using a reinforcement learning based workflow with a professional Streamlit dashboard.",
+      "An intelligent healthcare system that uses Deep Reinforcement Learning (DQN) to optimize hospital bed allocation and patient handling under limited resources, with a rule-based baseline showing the RL model significantly outperforms traditional allocation.",
     stack: [
       "Python",
-      "PyTorch",
-      "Reinforcement Learning",
+      "Deep Reinforcement Learning",
       "DQN",
       "Streamlit",
-      "SQLite",
-      "Pandas",
+      "Healthcare Simulation",
+      "Resource Optimization",
     ],
     major: true,
     live: "https://intelligent-bed-allocation.streamlit.app/",
